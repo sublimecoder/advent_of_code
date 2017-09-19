@@ -26,7 +26,7 @@ class Path
   end
 
   def distance_traversed_for coordinates
-    coordinates.map(&:abs).sum
+    coordinates.map(&:abs).inject(0, :+)
   end
 
   private
